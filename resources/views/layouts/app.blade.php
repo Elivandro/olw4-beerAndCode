@@ -14,6 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @livewireStyles
+        @stack('vegalite5-scripts')
     </head>
     <body class="min-h-screen">
         <div x-data="{ menuVisibility: false }">
