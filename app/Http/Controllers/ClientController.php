@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
+use App\Models\Address;
 use App\Models\Client;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -13,8 +14,7 @@ class ClientController extends Controller
 {
     public function index()
     {
-        $clients = Client::with('user', 'address')->paginate(10);
-        return view('clients.index', compact('clients'));
+        return view('clients.index');
     }
 
     public function create()
