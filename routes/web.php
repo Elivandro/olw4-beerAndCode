@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SaleController;
-use App\Http\Livewire\Dashboard;
+use App\Livewire\Dashboard;
 
 require __DIR__.'/auth.php';
 
