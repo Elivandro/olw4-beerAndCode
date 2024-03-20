@@ -24,9 +24,13 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected function casts ()
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password'          => 'hashed'
+        ];
+    }
 
     public function client(): HasOne
     {
