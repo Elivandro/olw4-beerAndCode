@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
-use App\Models\Address;
 use App\Models\Client;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -56,10 +55,9 @@ class ClientController extends Controller
             $client->update([
                 'address_id' => $request->get('address_id'),
             ]);
-
-            return redirect()->route('clients.index')->with("Cliente atualizado com sucesso!");
-            
         });
+
+        return redirect()->route('clients.index')->with("Cliente atualizado com sucesso!");
     }
 
     public function destroy(Client $client)
