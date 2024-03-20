@@ -12,7 +12,7 @@
         "laravel/sanctum": "^4",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^3.0",
-        "openai-php/laravel": "^0.8.0",
+        "openai-php/laravel": "^0.8.1",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0"
     },
