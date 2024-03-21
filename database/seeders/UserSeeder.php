@@ -2,19 +2,22 @@
 
 namespace Database\Seeders;
 
-use App\Models\Seller;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
 
     public function run()
     {
-        User::factory()
-            ->count(100)
-            ->has(Seller::factory()
-                ->hasSales(30))
-            ->create();
+        User::create([
+            'name'              => 'Admin',
+            'email'             => 'admin@example.com',
+            'email_verified_at' => now(),
+            'password'          => 'password',
+            'role_id'           => 1,
+            'remember_token'    => Str::random(10),
+        ]);
     }
 }
